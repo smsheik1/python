@@ -1,4 +1,6 @@
 from flask import Flask, render_template, session, request, redirect
+import random
+from random import randint
 app = Flask(__name__)
 app.secret_key = 'my_secret_key'
 
@@ -18,6 +20,7 @@ def process():
         'cave':random.randint(0,30),
         'house':random.randint(0,5)
     }
+    print buildings['farm']
     return redirect('/')
 
 
